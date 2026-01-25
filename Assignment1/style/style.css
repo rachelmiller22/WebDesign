@@ -1,1 +1,47 @@
-
+body {
+    background-color: #0f1411;
+    color: #e7e2d8;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.7;
+  }
+  
+  h1 {
+    background-color: #2a3a2f;
+    color: #f2eee6;
+    padding: 35px;
+    text-align: center;
+    margin: 0 auto 18px auto;
+    max-width: 950px;
+    letter-spacing: 1px;
+  }
+  
+  h2,
+  h3 {
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 0 auto 28px auto;
+    max-width: 950px;
+    color: #cfc8bc;
+  }
+  
+  h3 {
+    margin: 34px auto 10px auto;
+    max-width: 950px;
+    color: #e7e2d8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  
+  p {
+    max-width: 800px;
+    margin: 0 auto 18px auto;
+    background-color: #171d19;
+    padding: 16px 18px;
+    border-left: 4px solid #6b7b5a;
+    border-radius: 6px;
+  }
