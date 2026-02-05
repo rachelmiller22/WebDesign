@@ -1,1 +1,5 @@
-This is my root repository for my Intro to Web Design course. You can find my assignment folders inside. Thanks for visiting!
+## Assignment 1 Reflection
+
+While I did not receive a a lot of ways to change my website or how to improve it, I focused on continuing to refine my design and foundation of what I already had. I improved the visual hierarchy by using consistent heading levels for each chapter and increased spacing between sections so the page feels more organized, I also chose to make the design slightly bolder by enhancing contrast in the color, and I tried to introde a small hover interaction on the content sections, but was unable to figure out why it did not work, I will continue to work on that for next time. 
+
+These changes helped the page feel more intentional, I moved the "Game by Naughty Dog" section up as well near the title, I cannot tell if I like it better or not. I wanted to make it more engaging while still keeping the layout simple and easy to read. I still really liked my curved end caps, so I kept those, it really makes the design choice and pragraphs pop rather than just sitting on the page flat. 
