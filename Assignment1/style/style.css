@@ -1,47 +1,95 @@
 body {
-    background-color: #0f1411;
-    color: #e7e2d8;
-    font-family: Georgia, "Times New Roman", serif;
-    margin: 0;
-    padding: 40px;
-    line-height: 1.7;
-  }
-  
-  h1 {
-    background-color: #2a3a2f;
-    color: #f2eee6;
-    padding: 35px;
-    text-align: center;
-    margin: 0 auto 18px auto;
-    max-width: 950px;
-    letter-spacing: 1px;
-  }
-  
-  h2,
-  h3 {
-    text-align: center;
-  }
-  
-  h2 {
-    margin: 0 auto 28px auto;
-    max-width: 950px;
-    color: #cfc8bc;
-  }
-  
-  h3 {
-    margin: 34px auto 10px auto;
-    max-width: 950px;
-    color: #e7e2d8;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
-  }
-  
-  p {
-    max-width: 800px;
-    margin: 0 auto 18px auto;
-    background-color: #171d19;
-    padding: 16px 18px;
-    border-left: 4px solid #6b7b5a;
-    border-radius: 6px;
-  }
+  background-color: #0f1411;
+  color: #e7e2d8;
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  max-width: 950px;
+  margin: 0 auto 24px auto;
+  padding: 32px;
+  text-align: center;
+
+  background-color: #2a3a2f;
+  border: 1px solid #394c3f;
+  border-radius: 10px;
+
+  /* subtle depth = “bolder” without getting flashy */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0;
+  color: #f2eee6;
+  letter-spacing: 1px;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 10px 0 0 0;
+  color: #cfc8bc;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.section {
+  max-width: 950px;
+  margin: 0 auto 26px auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 auto 14px auto;
+  max-width: 950px;
+
+  color: #e7e2d8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 18px auto;
+  background-color: #171d19;
+  padding: 16px 18px;
+
+  border-left: 5px solid #6b7b5a;
+  border-radius: 8px;
+
+  /* slight boldness + clarity */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+hr {
+  max-width: 950px;
+  margin: 28px auto;
+  border: none;
+  border-top: 1px solid #2a3a2f;
+  opacity: 0.9;
+}
+
+.footer {
+  max-width: 950px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  color: #cfc8bc;
+  opacity: 0.85;
+}
+
+.footer p {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
