@@ -17,10 +17,8 @@ body {
   margin: 0 auto 48px auto;
   padding: 36px;
   text-align: center;
-
   background-color: #2a3a2f;
   border-radius: 12px;
-
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
@@ -47,7 +45,6 @@ h1 {
 h2 {
   text-align: center;
   margin-bottom: 18px;
-
   color: #e7e2d8;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -57,22 +54,18 @@ h2 {
 p {
   max-width: 800px;
   margin: 0 auto;
-
   background-color: #171d19;
   padding: 18px 20px;
-
   border-left: 5px solid #6b7b5a;
   border-radius: 8px;
-
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
-}
 
-/* Subtle interaction refinement */
-.section p {
+  /* hover prep */
   transition: all 0.25s ease;
 }
 
-.section:hover p {
+/* THIS WILL WORK */
+p:hover {
   border-left-color: #8fae8b;
   transform: translateY(-2px);
 }
