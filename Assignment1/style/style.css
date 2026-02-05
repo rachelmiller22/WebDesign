@@ -66,3 +66,13 @@ p {
 
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
+
+/* Subtle interaction refinement */
+.section p {
+  transition: all 0.25s ease;
+}
+
+.section:hover p {
+  border-left-color: #8fae8b;
+  transform: translateY(-2px);
+}
