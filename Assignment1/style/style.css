@@ -14,42 +14,39 @@ body {
 
 .hero {
   max-width: 950px;
-  margin: 0 auto 24px auto;
-  padding: 32px;
+  margin: 0 auto 48px auto;
+  padding: 36px;
   text-align: center;
 
   background-color: #2a3a2f;
-  border: 1px solid #394c3f;
-  border-radius: 10px;
+  border-radius: 12px;
 
-  /* subtle depth = “bolder” without getting flashy */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 h1 {
   margin: 0;
   color: #f2eee6;
   letter-spacing: 1px;
-  font-size: 48px;
+  font-size: 46px;
   text-transform: uppercase;
 }
 
 .subtitle {
-  margin: 10px 0 0 0;
+  margin-top: 12px;
   color: #cfc8bc;
-  letter-spacing: 1px;
   font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .section {
   max-width: 950px;
-  margin: 0 auto 26px auto;
+  margin: 0 auto 60px auto;
 }
 
 h2 {
   text-align: center;
-  margin: 0 auto 14px auto;
-  max-width: 950px;
+  margin-bottom: 18px;
 
   color: #e7e2d8;
   text-transform: uppercase;
@@ -59,37 +56,13 @@ h2 {
 
 p {
   max-width: 800px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto;
+
   background-color: #171d19;
-  padding: 16px 18px;
+  padding: 18px 20px;
 
   border-left: 5px solid #6b7b5a;
   border-radius: 8px;
 
-  /* slight boldness + clarity */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
-}
-
-hr {
-  max-width: 950px;
-  margin: 28px auto;
-  border: none;
-  border-top: 1px solid #2a3a2f;
-  opacity: 0.9;
-}
-
-.footer {
-  max-width: 950px;
-  margin: 30px auto 0 auto;
-  text-align: center;
-  color: #cfc8bc;
-  opacity: 0.85;
-}
-
-.footer p {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
