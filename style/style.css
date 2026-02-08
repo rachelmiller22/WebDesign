@@ -1,129 +1,72 @@
 body {
     background-color: #0f1411;
     color: #e7e2d8;
-    font-family: Arial, Helvetica, sans-serif; /* system font requirement */
+    font-family: Georgia, "Times New Roman", serif;
     margin: 0;
     padding: 40px;
     line-height: 1.7;
   }
   
-  header {
-    max-width: 950px;
-    margin: 0 auto 28px auto;
-    padding: 18px;
-    background-color: #2a3a2f;
-    border-radius: 10px;
-  }
-  
-  h1 {
-    color: #f2eee6;
-    padding: 18px;
-    text-align: center;
-    margin: 0 auto 12px auto;
-    letter-spacing: 1px;
-    background-color: transparent;
-    font-family: Georgia, "Times New Roman", serif;
-  }
-  
-  h2,
-  h3 {
-    text-align: center;
-  }
-  
-  h2 {
-    margin: 0 auto 16px auto;
-    max-width: 950px;
-    color: #cfc8bc;
-    font-family: Georgia, "Times New Roman", serif;
-  }
-  
-  /* NAV (required: style ul/li/a + inline-block) */
-  nav {
-    margin-top: 14px;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    display: inline-block; /* requirement */
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #d6d0c4;
-    text-decoration: none;
-    background-color: #171d19;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid #2f3a34;
-  }
-  
-  nav a:hover {
-    color: #f2eee6;
-    border-color: #6b7b5a;
-  }
-  
-  /* wrapper so pages don't feel loose */
-  .content {
-    max-width: 950px;
+  .page {
+    max-width: 1000px;
     margin: 0 auto;
   }
   
-  h3 {
-    margin: 34px auto 10px auto;
+  .hero {
     max-width: 950px;
+    margin: 0 auto 48px auto;
+    padding: 36px;
+    text-align: center;
+    background-color: #2a3a2f;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  }
+  
+  h1 {
+    margin: 0;
+    color: #f2eee6;
+    letter-spacing: 1px;
+    font-size: 46px;
+    text-transform: uppercase;
+  }
+  
+  .subtitle {
+    margin-top: 12px;
+    color: #cfc8bc;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .section {
+    max-width: 950px;
+    margin: 0 auto 60px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 18px;
     color: #e7e2d8;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 16px;
-    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
   }
   
   p {
     max-width: 800px;
-    margin: 0 auto 18px auto;
+    margin: 0 auto;
     background-color: #171d19;
-    padding: 16px 18px;
-    border-left: 4px solid #6b7b5a;
-    border-radius: 6px;
-  }
-  
-  /* image block */
-  .logo {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-    background-color: #171d19;
-    padding: 16px;
+    padding: 18px 20px;
+    border-left: 5px solid #6b7b5a;
     border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  
+    /* hover prep */
+    transition: all 0.25s ease;
   }
   
-  .logo img {
-    width: 320px;
-    height: auto;
-    display: inline-block;
-  }
-  
-  /* footer required */
-  footer {
-    max-width: 950px;
-    margin: 30px auto 0 auto;
-    padding: 14px;
-    text-align: center;
-    background-color: #2a3a2f;
-    border-radius: 10px;
-  }
-  
-  footer p {
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border-left: none;
-    max-width: none;
+  /* THIS WILL WORK */
+  p:hover {
+    border-left-color: #8fae8b;
+    transform: translateY(-2px);
   }
   
