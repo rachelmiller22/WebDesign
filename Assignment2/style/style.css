@@ -14,14 +14,14 @@ body {
   margin: 0 auto;
 }
 
-/* ---------- HERO (CLEAN, FLAT — NO BOX-WITHIN-BOX) ---------- */
+/* ---------- HERO (no card/box) ---------- */
 
 .hero {
-  background-color: transparent;   /* ← key change */
+  background-color: transparent;
   padding: 0 0 18px 0;
   text-align: center;
   margin-bottom: 22px;
-  box-shadow: none;                 /* ← removes card feeling */
+  box-shadow: none;
   border-radius: 0;
 }
 
@@ -33,10 +33,21 @@ h1 {
   color: #f2eee6;
 }
 
-.subtitle {
+/* IMPORTANT: remove ALL paragraph box styling from subtitle/hero text */
+.hero p,
+.hero .subtitle {
+  background: transparent;
+  padding: 0;
   margin: 8px 0 14px 0;
-  font-size: 18px;
+  border: 0;
+  border-left: 0;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: none;
+  transform: none;
+  transition: none;
   color: #cfc8bc;
+  font-size: 18px;
 }
 
 /* ---------- NAV ---------- */
@@ -72,7 +83,7 @@ nav {
   color: #8fae8b;
 }
 
-/* ---------- IMAGE ---------- */
+/* ---------- IMAGES ---------- */
 
 .hero-image {
   display: block;
