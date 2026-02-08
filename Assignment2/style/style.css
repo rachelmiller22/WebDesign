@@ -18,11 +18,11 @@ body {
 
 .hero {
   background-color: #1c2621;
-  padding: 28px 28px 18px 28px;
+  padding: 28px 28px 16px 28px;
   border-radius: 14px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 h1 {
@@ -33,10 +33,24 @@ h1 {
   color: #f2eee6;
 }
 
+/* subtitle should NEVER look like a boxed paragraph */
 .subtitle {
-  margin: 10px 0 14px 0;
+  margin: 10px 0 12px 0;
   font-size: 18px;
   color: #cfc8bc;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+/* extra safety: any p inside hero is unboxed */
+.hero p {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  margin: 10px 0 12px 0;
 }
 
 /* ---------- NAV ---------- */
@@ -59,7 +73,7 @@ nav {
 
 .nav a,
 .nav a:visited {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* system font */
   text-decoration: none;
   color: #e7e2d8;
   padding: 8px 12px;
@@ -77,9 +91,9 @@ nav {
 
 .hero-image {
   display: block;
-  max-width: 880px;
+  max-width: 680px; /* smaller */
   width: 100%;
-  margin: 24px auto 34px auto;
+  margin: 18px auto 28px auto;
   border-radius: 14px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }
@@ -87,15 +101,15 @@ nav {
 /* ---------- CONTENT ---------- */
 
 .section {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* system font */
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
 }
 
 p {
