@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-/* ---------- HERO (no card/box) ---------- */
+
 
 .hero {
   background-color: transparent;
@@ -33,7 +33,7 @@ h1 {
   color: #f2eee6;
 }
 
-/* IMPORTANT: remove ALL paragraph box styling from subtitle/hero text */
+
 .hero p,
 .hero .subtitle {
   background: transparent;
