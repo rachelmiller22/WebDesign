@@ -14,25 +14,17 @@ body {
   margin: 0 auto;
 }
 
-
+/* ---------- HEADER ---------- */
 
 .hero {
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
   padding: 0 0 18px 0;
   margin: 0 0 18px 0;
   text-align: center;
 }
 
-
 .hero p {
-  background: transparent;
-  border: 0;
-  border-left: 0;
-  box-shadow: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -53,6 +45,7 @@ h1 {
 
 nav {
   margin-top: 10px;
+  text-align: center;
 }
 
 .nav {
@@ -68,7 +61,7 @@ nav {
 
 .nav a,
 .nav a:visited {
-  font-family: Arial, Helvetica, sans-serif; /* system font */
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #e7e2d8;
   padding: 8px 12px;
@@ -120,4 +113,20 @@ p {
 p:hover {
   border-left-color: #8fae8b;
   transform: translateY(-2px);
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #6b7b5a;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
 }
