@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorites | The Last of Us</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="hero">
+        <h1>The Last of Us</h1>
+        <p class="subtitle">Favorites</p>
+
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a class="active" href="favorites.html">Favorites</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+
+        <!-- TABLE -->
+        <section class="section">
+          <h2>Favorite Characters</h2>
+
+          <table class="favorites-table">
+            <thead>
+              <tr>
+                <th>Character</th>
+                <th>Role</th>
+                <th>Why Important</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Joel</td>
+                <td>Protector</td>
+                <td>Father figure and survivor</td>
+              </tr>
+              <tr>
+                <td>Ellie</td>
+                <td>Immune</td>
+                <td>Hope for a cure</td>
+              </tr>
+              <tr>
+                <td>Bill</td>
+                <td>Survivalist</td>
+                <td>Shows isolation effects</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- FORM -->
+        <section class="section">
+          <h2>Favorite Survey</h2>
+
+          <form class="favorites-form">
+            <label>Name</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Favorite Character</label>
+            <input type="text" placeholder="Joel, Ellie, etc.">
+
+            <label>Favorite Season</label>
+            <select>
+              <option>Summer</option>
+              <option>Fall</option>
+              <option>Winter</option>
+              <option>Spring</option>
+            </select>
+
+            <label>Comments</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <!-- FLEXBOX GRID -->
+        <section class="section">
+          <h2>Image Grid</h2>
+
+          <div class="image-grid">
+            <img src="images/Billgrid5.png" alt="Bill scene">
+            <img src="images/billgrid6.png" alt="Bill scene">
+            <img src="images/elliegrid1.png" alt="Ellie scene">
+            <img src="images/elliegrid2.png" alt="Ellie scene">
+            <img src="images/gameplaygrid3.png" alt="Gameplay scene">
+            <img src="images/gameplaygrid4.png" alt="Gameplay scene">
+            <img src="images/gameplaygrid7.png" alt="Gameplay scene">
+            <img src="images/gameplaygrid8.png" alt="Gameplay scene">
+            <img src="images/gameplaygrid9.png" alt="Gameplay scene">
+          </div>
+
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p class="footer-text">The Last of Us</p>
+      </footer>
+    </div>
+  </body>
+</html>

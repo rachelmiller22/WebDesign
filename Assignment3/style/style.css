@@ -1,0 +1,263 @@
+/* ---------- BASE ---------- */
+
+body {
+  background-color: #0f1411;
+  color: #e7e2d8;
+  font-family: "Rubik", Arial, Helvetica, sans-serif; /* Google Font applied */
+  margin: 0;
+  padding: 40px;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+
+.hero {
+  padding: 0 0 18px 0;
+  margin: 0 0 18px 0;
+  text-align: center;
+}
+
+.hero p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f2eee6;
+}
+
+.subtitle {
+  margin: 10px 0 14px 0;
+  font-size: 18px;
+  color: #cfc8bc;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav a,
+.nav a:visited {
+  text-decoration: none;
+  color: #e7e2d8;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #171d19;
+  color: #8fae8b;
+}
+
+/* ---------- IMAGES ---------- */
+
+.hero-image {
+  display: block;
+  max-width: 620px;
+  width: 100%;
+  margin: 18px auto 28px auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- CONTENT ---------- */
+
+.section {
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+p {
+  background-color: #171d19;
+  padding: 18px 20px;
+  border-left: 5px solid #6b7b5a;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  margin: 0;
+  transition: border-left-color 0.2s ease, transform 0.2s ease;
+}
+
+p:hover {
+  border-left-color: #8fae8b;
+  transform: translateY(-2px);
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #6b7b5a;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* ============================================================
+   ASSIGNMENT 3 ADDITIONS
+   ============================================================ */
+
+/* ---------- TABLE ---------- */
+
+.favorites-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.favorites-table th,
+.favorites-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(143, 174, 139, 0.2);
+}
+
+.favorites-table th {
+  background-color: #171d19;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #cfc8bc;
+}
+
+.favorites-table tbody tr:hover {
+  background-color: rgba(143, 174, 139, 0.1);
+}
+
+/* ---------- FORM ---------- */
+
+.favorites-form {
+  margin-top: 20px;
+}
+
+.favorites-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.favorites-form input,
+.favorites-form select,
+.favorites-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(143, 174, 139, 0.3);
+  background-color: #171d19;
+  color: #e7e2d8;
+  outline: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.favorites-form input:focus,
+.favorites-form select:focus,
+.favorites-form textarea:focus {
+  border-color: #8fae8b;
+  transform: translateY(-2px);
+}
+
+.favorites-form input[type="radio"],
+.favorites-form input[type="checkbox"] {
+  width: auto;
+  accent-color: #8fae8b;
+}
+
+.favorites-form button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(143, 174, 139, 0.2);
+  color: #e7e2d8;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.favorites-form button:hover {
+  background-color: rgba(143, 174, 139, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ---------- FLEXBOX IMAGE GRID ---------- */
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: calc((100% - 24px) / 3);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ---------- MOBILE MEDIA QUERY ---------- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .nav li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .image-grid img {
+    width: calc((100% - 12px) / 2);
+  }
+}
