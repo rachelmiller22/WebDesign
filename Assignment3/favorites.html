@@ -6,7 +6,10 @@
     <title>Favorites | The Last of Us</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style/style.css" />
   </head>
@@ -28,7 +31,6 @@
       </header>
 
       <main>
-
         <!-- TABLE -->
         <section class="section">
           <h2>Favorite Characters</h2>
@@ -61,30 +63,46 @@
           </table>
         </section>
 
-        <!-- FORM -->
+        <!-- FORM + RESULTS -->
         <section class="section">
           <h2>Favorite Survey</h2>
 
-          <form class="favorites-form">
-            <label>Name</label>
-            <input type="text" placeholder="Your name">
+          <form class="favorites-form" id="surveyForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
 
-            <label>Favorite Character</label>
-            <input type="text" placeholder="Joel, Ellie, etc.">
+            <label for="character">Favorite Character</label>
+            <input
+              type="text"
+              id="character"
+              placeholder="Joel, Ellie, etc."
+              required
+            />
 
-            <label>Favorite Season</label>
-            <select>
+            <label for="season">Favorite Season</label>
+            <select id="season" required>
+              <option value="">Select one</option>
               <option>Summer</option>
               <option>Fall</option>
               <option>Winter</option>
               <option>Spring</option>
             </select>
 
-            <label>Comments</label>
-            <textarea rows="4"></textarea>
+            <label for="comments">Comments</label>
+            <textarea id="comments" rows="4" placeholder="Optional..."></textarea>
 
-            <button type="submit">Submit</button>
+            <div class="survey-actions">
+              <button type="submit">Submit</button>
+              <button type="button" class="clear-btn" id="clearSurveys">
+                Clear Saved Surveys
+              </button>
+            </div>
           </form>
+
+          <p id="thankYouMessage" class="thank-you" aria-live="polite"></p>
+
+          <h2 class="results-title">Saved Survey Entries</h2>
+          <div id="surveyResults" class="survey-results"></div>
         </section>
 
         <!-- FLEXBOX GRID -->
@@ -92,24 +110,127 @@
           <h2>Image Grid</h2>
 
           <div class="image-grid">
-            <img src="images/Billgrid5.png" alt="Bill scene">
-            <img src="images/billgrid6.png" alt="Bill scene">
-            <img src="images/elliegrid1.png" alt="Ellie scene">
-            <img src="images/elliegrid2.png" alt="Ellie scene">
-            <img src="images/gameplaygrid3.png" alt="Gameplay scene">
-            <img src="images/gameplaygrid4.png" alt="Gameplay scene">
-            <img src="images/gameplaygrid7.png" alt="Gameplay scene">
-            <img src="images/gameplaygrid8.png" alt="Gameplay scene">
-            <img src="images/gameplaygrid9.png" alt="Gameplay scene">
+            <img src="images/Billgrid5.png" alt="Bill scene" />
+            <img src="images/billgrid6.png" alt="Bill scene" />
+            <img src="images/elliegrid1.png" alt="Ellie scene" />
+            <img src="images/elliegrid2.png" alt="Ellie scene" />
+            <img src="images/gameplaygrid3.png" alt="Gameplay scene" />
+            <img src="images/gameplaygrid4.png" alt="Gameplay scene" />
+            <img src="images/gameplaygrid7.png" alt="Gameplay scene" />
+            <img src="images/gameplaygrid8.png" alt="Gameplay scene" />
+            <img src="images/gameplaygrid9.png" alt="Gameplay scene" />
           </div>
-
         </section>
-
       </main>
 
       <footer class="footer">
         <p class="footer-text">The Last of Us</p>
       </footer>
     </div>
+
+    <script>
+      const STORAGE_KEY = "assignment3_surveys";
+
+      function getSurveys() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          return raw ? JSON.parse(raw) : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveSurveys(surveys) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+      }
+
+      function escapeHtml(text) {
+        return String(text)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function renderSurveys() {
+        const resultsDiv = document.getElementById("surveyResults");
+        const surveys = getSurveys();
+
+        resultsDiv.innerHTML = "";
+
+        if (surveys.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "empty-results";
+          empty.textContent = "No saved surveys yet — submit one above!";
+          resultsDiv.appendChild(empty);
+          return;
+        }
+
+        surveys
+          .slice()
+          .reverse()
+          .forEach((s) => {
+            const entry = document.createElement("div");
+            entry.classList.add("survey-entry");
+            entry.innerHTML = `
+              <h3>${escapeHtml(s.name)}</h3>
+              <p><strong>Favorite Character:</strong> ${escapeHtml(s.character)}</p>
+              <p><strong>Favorite Season:</strong> ${escapeHtml(s.season)}</p>
+              <p><strong>Comments:</strong> ${escapeHtml(s.comments || "—")}</p>
+              <p class="survey-time">${escapeHtml(s.time)}</p>
+            `;
+            resultsDiv.appendChild(entry);
+          });
+      }
+
+      function showThankYou(name) {
+        const msg = document.getElementById("thankYouMessage");
+        msg.textContent = `Thank you for filling out the survey, ${name}!`;
+        msg.classList.add("show");
+
+        setTimeout(() => {
+          msg.classList.remove("show");
+        }, 3500);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSurveys();
+
+        const form = document.getElementById("surveyForm");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const character = document.getElementById("character").value.trim();
+          const season = document.getElementById("season").value;
+          const comments = document.getElementById("comments").value.trim();
+
+          const surveys = getSurveys();
+          surveys.push({
+            name,
+            character,
+            season,
+            comments,
+            time: new Date().toLocaleString(),
+          });
+
+          saveSurveys(surveys);
+
+          showThankYou(name);
+          form.reset();
+          renderSurveys();
+        });
+
+        document
+          .getElementById("clearSurveys")
+          .addEventListener("click", () => {
+            localStorage.removeItem(STORAGE_KEY);
+            document.getElementById("thankYouMessage").textContent =
+              "Saved surveys cleared.";
+            renderSurveys();
+          });
+      });
+    </script>
   </body>
 </html>
