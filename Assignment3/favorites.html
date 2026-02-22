@@ -31,9 +31,9 @@
       </header>
 
       <main>
-        <!-- TABLE -->
+        <!-- TABLE: PART I -->
         <section class="section">
-          <h2>Favorite Characters</h2>
+          <h2>Part I Characters</h2>
 
           <table class="favorites-table">
             <thead>
@@ -59,6 +59,68 @@
                 <td>Survivalist</td>
                 <td>Shows isolation effects</td>
               </tr>
+              <tr>
+                <td>Tess</td>
+                <td>Partner</td>
+                <td>Pushes the story forward early</td>
+              </tr>
+              <tr>
+                <td>Tommy</td>
+                <td>Brother</td>
+                <td>Connects Joel to his past and purpose</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- TABLE: PART II -->
+        <section class="section">
+          <h2>Part II Characters</h2>
+
+          <table class="favorites-table">
+            <thead>
+              <tr>
+                <th>Character</th>
+                <th>Group</th>
+                <th>Why Important</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abby</td>
+                <td>WLF</td>
+                <td>Shows the story from the “other side”</td>
+              </tr>
+              <tr>
+                <td>Lev</td>
+                <td>Seraphites (ex)</td>
+                <td>Represents loyalty and change</td>
+              </tr>
+              <tr>
+                <td>Dina</td>
+                <td>Jackson</td>
+                <td>Grounds Ellie emotionally</td>
+              </tr>
+              <tr>
+                <td>Jesse</td>
+                <td>Jackson</td>
+                <td>Highlights community and sacrifice</td>
+              </tr>
+              <tr>
+                <td>Owen</td>
+                <td>WLF</td>
+                <td>Shows conflict between duty and values</td>
+              </tr>
+              <tr>
+                <td>Mel</td>
+                <td>WLF</td>
+                <td>Shows moral complexity in the WLF</td>
+              </tr>
+              <tr>
+                <td>Tommy</td>
+                <td>Jackson</td>
+                <td>Revenge changes him drastically</td>
+              </tr>
             </tbody>
           </table>
         </section>
@@ -71,13 +133,32 @@
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Your name" required />
 
+            <label for="game">Which game?</label>
+            <select id="game" required>
+              <option value="">Select one</option>
+              <option>The Last of Us (Part I)</option>
+              <option>The Last of Us Part II</option>
+            </select>
+
             <label for="character">Favorite Character</label>
-            <input
-              type="text"
-              id="character"
-              placeholder="Joel, Ellie, etc."
-              required
-            />
+            <select id="character" required>
+              <option value="">Select a character</option>
+
+              <!-- Part I -->
+              <option>Joel</option>
+              <option>Ellie</option>
+              <option>Tess</option>
+              <option>Bill</option>
+              <option>Tommy</option>
+
+              <!-- Part II -->
+              <option>Abby</option>
+              <option>Lev</option>
+              <option>Dina</option>
+              <option>Jesse</option>
+              <option>Owen</option>
+              <option>Mel</option>
+            </select>
 
             <label for="season">Favorite Season</label>
             <select id="season" required>
@@ -105,20 +186,37 @@
           <div id="surveyResults" class="survey-results"></div>
         </section>
 
-        <!-- FLEXBOX GRID -->
+        <!-- FLEXBOX GRID: PART I / GAMEPLAY -->
         <section class="section">
-          <h2>Image Grid</h2>
+          <h2>Image Grid (Part I / Gameplay)</h2>
 
           <div class="image-grid">
-            <img src="images/Billgrid5.png" alt="Bill scene" />
-            <img src="images/billgrid6.png" alt="Bill scene" />
-            <img src="images/elliegrid1.png" alt="Ellie scene" />
-            <img src="images/elliegrid2.png" alt="Ellie scene" />
-            <img src="images/gameplaygrid3.png" alt="Gameplay scene" />
-            <img src="images/gameplaygrid4.png" alt="Gameplay scene" />
-            <img src="images/gameplaygrid7.png" alt="Gameplay scene" />
-            <img src="images/gameplaygrid8.png" alt="Gameplay scene" />
-            <img src="images/gameplaygrid9.png" alt="Gameplay scene" />
+            <img src="images/Billgrid5.png" alt="Bill grid image 5" />
+            <img src="images/billgrid6.png" alt="Bill grid image 6" />
+            <img src="images/elliegrid1.png" alt="Ellie grid image 1" />
+            <img src="images/elliegrid2.png" alt="Ellie grid image 2" />
+            <img src="images/gameplaygrid3.png" alt="Gameplay grid image 3" />
+            <img src="images/gameplaygrid4.png" alt="Gameplay grid image 4" />
+            <img src="images/gameplaygrid7.png" alt="Gameplay grid image 7" />
+            <img src="images/gameplaygrid8.png" alt="Gameplay grid image 8" />
+            <img src="images/gameplaygrid9.png" alt="Gameplay grid image 9" />
+          </div>
+        </section>
+
+        <!-- FLEXBOX GRID: PART II CHARACTERS -->
+        <section class="section">
+          <h2>Image Grid (Part II Characters)</h2>
+
+          <div class="image-grid">
+            <img src="images/Abbygrid2.png" alt="Abby" />
+            <img src="images/dinagrid2.png" alt="Dina" />
+            <img src="images/jessiegrid2.png" alt="Jesse" />
+            <img src="images/Levgrid2.png" alt="Lev" />
+            <img src="images/melgrid2.png" alt="Mel" />
+            <img src="images/owengrid2.png" alt="Owen" />
+            <img src="images/tommygrid2.png" alt="Tommy" />
+            <img src="images/tlou2.png" alt="The Last of Us Part II" />
+            <img src="images/gameplaygrid9.png" alt="Gameplay (extra unique image)" />
           </div>
         </section>
       </main>
@@ -175,6 +273,7 @@
             entry.classList.add("survey-entry");
             entry.innerHTML = `
               <h3>${escapeHtml(s.name)}</h3>
+              <p><strong>Game:</strong> ${escapeHtml(s.game)}</p>
               <p><strong>Favorite Character:</strong> ${escapeHtml(s.character)}</p>
               <p><strong>Favorite Season:</strong> ${escapeHtml(s.season)}</p>
               <p><strong>Comments:</strong> ${escapeHtml(s.comments || "—")}</p>
@@ -202,13 +301,15 @@
           event.preventDefault();
 
           const name = document.getElementById("name").value.trim();
-          const character = document.getElementById("character").value.trim();
+          const game = document.getElementById("game").value;
+          const character = document.getElementById("character").value;
           const season = document.getElementById("season").value;
           const comments = document.getElementById("comments").value.trim();
 
           const surveys = getSurveys();
           surveys.push({
             name,
+            game,
             character,
             season,
             comments,
@@ -222,14 +323,12 @@
           renderSurveys();
         });
 
-        document
-          .getElementById("clearSurveys")
-          .addEventListener("click", () => {
-            localStorage.removeItem(STORAGE_KEY);
-            document.getElementById("thankYouMessage").textContent =
-              "Saved surveys cleared.";
-            renderSurveys();
-          });
+        document.getElementById("clearSurveys").addEventListener("click", () => {
+          localStorage.removeItem(STORAGE_KEY);
+          document.getElementById("thankYouMessage").textContent =
+            "Saved surveys cleared.";
+          renderSurveys();
+        });
       });
     </script>
   </body>
