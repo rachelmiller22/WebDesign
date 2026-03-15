@@ -1,99 +1,104 @@
 body {
   margin: 0;
-  background-color: #e9e9f2;
+  background-color: #403a6d;
   font-family: Georgia, serif;
-  color: #3b2d2d;
+  color: #e5bdd4;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 14px 20px;
-  background-color: #ead1c2;
-  border-bottom: 1px solid #c89f8a;
+  gap: 110px;
+  padding: 18px 20px;
+  background-color: #403a6d;
 }
 
 .nav a {
-  text-decoration: none;
-  color: #6a4535;
-  font-weight: bold;
-  font-size: 16px;
+  color: #d7a0bf;
+  text-decoration: underline;
+  font-size: 18px;
 }
 
 .page-title {
   text-align: center;
-  color: #7a3d88;
-  font-size: 64px;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-.page-text {
-  text-align: center;
-  font-size: 24px;
-  margin: 0 auto 40px auto;
-  max-width: 900px;
-  color: #4b3a3a;
+  color: #f0d2df;
+  font-size: 28px;
+  font-weight: normal;
+  margin-top: 8px;
+  margin-bottom: 25px;
 }
 
 .gallery {
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto 50px auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 18px;
 }
 
 .item {
-  background-color: #d5b2cc;
-  border-radius: 12px;
-  height: 360px;
-  padding: 18px;
-  box-sizing: border-box;
+  background-color: #e3bdd0;
+  border-radius: 6px;
+  height: 305px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.text-item {
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.text-item p {
+  margin: 0;
+  color: #5a3450;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  display: block;
 }
 
-@media (max-width: 1000px) {
+/* footer */
+.footer {
+  text-align: center;
+  color: #9d7392;
+  font-size: 16px;
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .page-title {
-    font-size: 48px;
-  }
-
-  .page-text {
-    font-size: 20px;
+  .nav {
+    gap: 50px;
   }
 }
 
+/* mobile */
 @media (max-width: 700px) {
   .gallery {
     grid-template-columns: 1fr;
   }
 
-  .page-title {
-    font-size: 38px;
-  }
-
-  .page-text {
-    font-size: 18px;
-    padding: 0 15px;
-  }
-
   .nav {
     gap: 20px;
     flex-wrap: wrap;
+  }
+
+  .page-title {
+    font-size: 24px;
   }
 }
