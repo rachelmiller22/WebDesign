@@ -35,7 +35,7 @@ body {
 
 .page-text {
   max-width: 900px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 40px auto;
   padding: 0 20px;
   text-align: center;
   line-height: 1.7;
@@ -121,10 +121,8 @@ body {
   background-color: #fce8dc;
   border-radius: 12px;
   aspect-ratio: 1 / 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(90, 55, 40, 0.12);
 }
 
 .item img {
@@ -132,15 +130,6 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.item p {
-  margin: 0;
-  padding: 24px;
-  text-align: center;
-  line-height: 1.6;
-  color: #6b4332;
-  font-size: 1rem;
 }
 
 /* BLOG POST PAGE */
@@ -183,107 +172,5 @@ body {
   .nav {
     flex-wrap: wrap;
     gap: 16px;
-  }
-}
-/* GRID PAGE ONLY */
-.grid-page {
-  margin: 0;
-  background-color: #403a6d;
-  font-family: Georgia, serif;
-  color: #e5bdd4;
-}
-
-.grid-page .grid-nav {
-  display: flex;
-  justify-content: center;
-  gap: 110px;
-  padding: 18px 20px;
-  background-color: #403a6d;
-}
-
-.grid-page .grid-nav a {
-  color: #d7a0bf;
-  text-decoration: underline;
-  font-size: 18px;
-}
-
-.grid-page .grid-title {
-  text-align: center;
-  color: #f0d2df;
-  font-size: 28px;
-  font-weight: normal;
-  margin-top: 8px;
-  margin-bottom: 25px;
-}
-
-.grid-page .grid-demo {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 8px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 18px;
-}
-
-.grid-page .grid-card {
-  background-color: #e3bdd0;
-  border-radius: 6px;
-  height: 305px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.grid-page .grid-text {
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.grid-page .grid-text p {
-  margin: 0;
-  color: #5a3450;
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-.grid-page .grid-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.grid-page .grid-footer {
-  text-align: center;
-  color: #9d7392;
-  font-size: 16px;
-  margin-top: 25px;
-  padding-bottom: 20px;
-}
-
-@media (max-width: 1200px) {
-  .grid-page .grid-demo {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-page .grid-nav {
-    gap: 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  .grid-page .grid-demo {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-page .grid-nav {
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .grid-page .grid-title {
-    font-size: 24px;
   }
 }
