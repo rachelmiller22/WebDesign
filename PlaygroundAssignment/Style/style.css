@@ -1,78 +1,62 @@
 body {
   margin: 0;
-  background-color: #101820;
-  color: #f2f2f2;
-  font-family: Georgia, "Times New Roman", serif;
+  background-color: #0f1411; /* dark theme */
+  color: #e7e2d8;
+  font-family: Georgia, serif;
 }
 
+/* TITLE */
 .title {
   text-align: center;
-  font-size: 3rem;
-  margin: 35px 20px 20px;
-  color: #f2f2f2;
+  font-size: 2.5rem;
+  margin: 30px;
 }
 
+/* GRID LAYOUT */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  padding: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
+/* CARD */
 .card {
-  background-color: #1b2b34;
-  border-radius: 16px;
+  background-color: #2a3a2f;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
-}
-
+/* 🔥 THIS FIXES IMAGE SIZE */
 .card img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
+  height: 200px;       /* 👈 keeps them consistent */
+  object-fit: cover;   /* 👈 crops nicely */
 }
 
+/* TEXT */
 .card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 18px;
+  padding: 15px;
 }
 
 .card-content h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #ff4d4d;
+  margin: 0 0 8px;
+  color: #ff4d4d; /* red */
 }
 
 .card-content p {
-  margin: 0;
-  line-height: 1.5;
-  color: #d9d9d9;
+  font-size: 0.95rem;
 }
 
+/* BUTTON */
 .card-content a {
-  margin-top: 8px;
-  align-self: flex-start;
+  display: inline-block;
+  margin-top: 10px;
   text-decoration: none;
-  font-weight: bold;
   color: white;
   background: linear-gradient(45deg, #c1121f, #2563eb);
-  padding: 10px 16px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.card-content a:hover {
-  transform: scale(1.04);
-  opacity: 0.9;
+  padding: 8px 14px;
+  border-radius: 6px;
 }
