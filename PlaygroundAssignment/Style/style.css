@@ -1,76 +1,78 @@
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background-color: #0f1411;
-  color: #e7e2d8;
+  background-color: #101820;
+  color: #f2f2f2;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .title {
   text-align: center;
-  margin: 40px 0;
-  font-size: 48px;
+  font-size: 3rem;
+  margin: 35px 20px 20px;
+  color: #f2f2f2;
 }
 
-/* GRID layout */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px;
 }
 
-/* CARD */
 .card {
-  background-color: #2a3a2f;
+  background-color: #1b2b34;
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* IMAGE */
 .card img {
   width: 100%;
-  height: 250px;
+  height: 260px;
   object-fit: cover;
+  display: block;
 }
 
-/* CONTENT */
 .card-content {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
 }
 
 .card-content h2 {
-  margin: 0 0 10px 0;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff4d4d;
 }
 
 .card-content p {
-  font-size: 14px;
-  margin-bottom: 15px;
+  margin: 0;
+  line-height: 1.5;
+  color: #d9d9d9;
 }
-
 
 .card-content a {
+  margin-top: 8px;
+  align-self: flex-start;
   text-decoration: none;
   font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #c1121f, #2563eb);
   padding: 10px 16px;
   border-radius: 8px;
-  display: inline-block;
-
-  /* gradient blend */
-  background: linear-gradient(45deg, #d62828, #1d4ed8);
-  color: white;
-
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* hover effect */
 .card-content a:hover {
-  background: linear-gradient(45deg, #1d4ed8, #d62828);
-  transform: scale(1.05);
+  transform: scale(1.04);
+  opacity: 0.9;
 }
