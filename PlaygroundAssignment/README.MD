@@ -1,10 +1,10 @@
 # Playground Assignment
 
 ##  Flexbox Froggy
-![Flexbox Froggy](images/WINNNER.png)
+![Flexbox Froggy](Images/WINNNER.png)
 
 ##  Grid Garden
-![Grid Garden](images/Winner2.png)
+![Grid Garden](Images/Winner2.png)
 
 ---
 
