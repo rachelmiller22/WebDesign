@@ -1,62 +1,63 @@
 body {
   margin: 0;
-  background-color: #0f1411; /* dark theme */
+  background-color: #0f1411;
   color: #e7e2d8;
-  font-family: Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-/* TITLE */
 .title {
   text-align: center;
   font-size: 2.5rem;
-  margin: 30px;
+  margin: 30px 20px;
+  color: #e7e2d8;
 }
 
-/* GRID LAYOUT */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
-/* CARD */
 .card {
   background-color: #2a3a2f;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* 🔥 THIS FIXES IMAGE SIZE */
 .card img {
   width: 100%;
-  height: 200px;       /* 👈 keeps them consistent */
-  object-fit: cover;   /* 👈 crops nicely */
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
-/* TEXT */
 .card-content {
-  padding: 15px;
+  padding: 16px;
 }
 
 .card-content h2 {
   margin: 0 0 8px;
-  color: #ff4d4d; /* red */
+  color: #ff4d4d;
+  font-size: 1.5rem;
 }
 
 .card-content p {
+  margin: 0 0 14px;
   font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e7e2d8;
 }
 
-/* BUTTON */
 .card-content a {
   display: inline-block;
-  margin-top: 10px;
   text-decoration: none;
   color: white;
   background: linear-gradient(45deg, #c1121f, #2563eb);
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 9px 15px;
+  border-radius: 7px;
+  font-weight: bold;
 }
