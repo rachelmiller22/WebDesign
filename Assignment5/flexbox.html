@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A featured layout inspired by web components and built with flexbox.">
   <title>Feature</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +14,7 @@
 <nav class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">🌅</a>
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -28,22 +29,30 @@
   </div>
 </nav>
 
-<main>
-
+<header>
   <h1 class="page-title">Featured Story</h1>
+</header>
 
+<main>
   <section class="blog-preview">
     <img src="images/sensetbeach.jpg" alt="Warm sunset over the ocean">
     <div class="blog-text">
       <p class="date">Spring 2026</p>
       <h2 class="post-title">Golden Hour Along the Coast</h2>
       <p class="post-preview">
-        Evening light changes everything. This moment inspired the tone of this site.
+         These photots inspired this site.
       </p>
       <a href="blog-post.html" class="read-more">Read More</a>
     </div>
   </section>
 
+  <section class="inspiration">
+    <h2>Component Inspiration</h2>
+    <img src="images/inspiration.jpg" alt="Screenshot of a blog or card layout that inspired my design" class="inspiration-image">
+    <p class="inspiration-text">
+      This screenshot shows the kind of layout that inspired my component. I recreated it using my own images, colors, and spacing to fit the theme of my site. What I was really interested in was just getting something that fit what I wanted to do with my images. 
+    </p>
+  </section>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
