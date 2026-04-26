@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A featured layout inspired by web components and built with flexbox.">
+  <title>Feature</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">🌅</a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="flexbox.html">Feature</a></li>
+        <li class="nav-item"><a class="nav-link" href="grid.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog-post.html">Next Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <h1 class="page-title">Featured Story</h1>
+</header>
+
+<main>
+  <section class="blog-preview">
+    <img src="images/open-water.jpg" alt="Blue ocean with dark rock formations">
+    <div class="blog-text">
+      <p class="date">Spring 2026</p>
+      <h2 class="post-title">Golden Hour Along the Coast</h2>
+      <p class="post-preview">
+        These photos inspired this site because they show the kind of light, movement, and natural shapes I like to photograph.
+      </p>
+      <a href="blog-post.html" class="read-more">Read More</a>
+    </div>
+  </section>
+
+  <section class="featured-moment">
+    <div class="featured-text">
+      <p class="date">Creative Direction</p>
+      <h2>Building a Visual Mood</h2>
+      <p>
+        I wanted this page to feel simple and image-focused, so the layout uses a large photo, soft colors, and readable spacing.
+      </p>
+    </div>
+  </section>
+
+  <section class="inspiration">
+    <h2>Component Inspiration</h2>
+    <img src="images/inspiration.jpg" alt="Screenshot of a blog or card layout that inspired my design" class="inspiration-image">
+    <p class="inspiration-text">
+      This screenshot shows the kind of layout that inspired my component. I recreated it using my own images, colors, and spacing to fit the theme of my site. What I was really interested in was getting something that fit what I wanted to do with my images.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Rachel Miller</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
