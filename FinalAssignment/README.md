@@ -56,3 +56,20 @@ My site plan for this website was to create a personal photography site based on
 - **Supporting Content:** Paragraphs describing future improvements (gallery, layout, overall feel)
 - **Call-to-Action:** Encourages continued development of the site into a portfolio
 - **Footer:** Same as Home
+# Golden Hour Getaways
+
+---
+
+# Reflection
+
+## What’s something new you learned while building your site?
+One new thing I learned was how to combine Bootstrap with my own CSS styling while still keeping the design consistent. I also learned more about using Flexbox and CSS Grid together to organize content and images.
+
+## How did you balance creativity with usability?
+I wanted the site to feel creative and personal while still being easy to navigate. I kept the layout simple and consistent across all pages so the images could stand out without making the site feel cluttered.
+
+## What are you most proud of in your final project?
+I am most proud of the gallery page and overall atmosphere of the website. I think the warm colors, hover effects, photography, and spacing all work together well and make the site feel complete.
+
+## How do you see yourself using these skills later on?
+I could see myself using these skills later for creative portfolios, photography projects, or other media-related work. Learning how to build and style websites also helped me better understand layout and organization. I really enjoyed making this overall becuase it challenged me to be creative with some of my own work that I alrady had. 
